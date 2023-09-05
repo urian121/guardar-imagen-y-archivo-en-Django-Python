@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Image Gallery</title>
+  </head>
+  <body>
+    {% load static %} {% for image in images %}
+    <img src="{{image.image.url}}" alt="{{image.name}}" style="width: 150px" />
+    <p>{{image.name}}</p>
+    {% endfor %}
+  </body>
+</html>
+
+<div class="row">
+  {% for m in movies %}
+  <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+    <div class="card h-100 p-4">
+      <img src="{{ m.image.url }}" class="card-img-top" />
+      <a href="/media/{{m.file}}">View Script</a>
+    </div>
+  </div>
+  {% empty %}
+  <p>No movies added.</p>
+  {% endfor %}
+</div>
