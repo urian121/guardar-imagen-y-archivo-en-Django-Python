@@ -1,4 +1,4 @@
-# Guardar imagen en Django Python 🐍
+# Guardar archivo imagen en Django Python 🐍
 
 ###### 1. Crear un entorno virtual, hay muchas formas
 
