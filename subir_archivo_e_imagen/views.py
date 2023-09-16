@@ -16,6 +16,9 @@ def upload(request):
         if form.is_valid():
             form.save()
         return redirect("homepage")
-    form = SubirDumentoImagenForm()
-    movies = SubirDumentoImagen.objects.all()
-    return render(request=request, template_name="index.html", context={'form': form, 'movies': movies})
+
+
+def listarData(request):
+    data = SubirDumentoImagen.objects.all()
+    print(data)
+    return render(request=request, template_name="list_img_file.html", context={'data': data})
